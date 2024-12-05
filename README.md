@@ -55,11 +55,11 @@ This approach could contribute to the development of a practical method for dete
 
 ## 🤖 Morphological Operation Implementation:
    1. Apply **erosion** and **dilation** operations on the images.
-   2. Use varying kernel sizes **(e.g., 1x1 3x3, 5x5, 7x7, 9x9)** for both erosion and dilation to observe feature variations.
+   2. Use varying kernel sizes **(e.g., 1x1, 3x3, 5x5, 7x7, 9x9)** for both erosion and dilation to observe feature variations.
    3. Generate processed versions of each image for every combination of kernel sizes **(5 for erosion × 5 for dilation = 25 combinations)**.
 
 ## 🤖 Feature Extraction:
-   1. Analyze the morphological effects (texture, edge variations, etc.) introduced by erosion and dilation for each kernel size.
+   1. Analyze the morphological effects **(texture, edge variations, etc.)** introduced by erosion and dilation for each kernel size.
    2. Quantify the changes in image features (e.g., edge intensities, texture uniformity) using image-processing metrics like:
    3. Edge detection (e.g., Sobel or Canny filters).
    4. Texture analysis (e.g., Gray Level Co-occurrence Matrix, Local Binary Patterns).
