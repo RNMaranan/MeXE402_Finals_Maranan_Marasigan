@@ -46,6 +46,39 @@ The project expects to highlight unique patterns or inconsistencies in deepfake 
 
 This approach could contribute to the development of a practical method for detecting deepfakes in **computer vision** applications.
 
+# 📍 METHODOLOGY
+
+## 🤖 Dataset Collection and Preprocessing:
+   1. Collect a dataset containing both deepfake and real face images.
+   2. Ensure equal representation of deepfake and real images to avoid dataset bias.
+   3. Resize all images to a uniform dimension for consistent analysis.
+
+## 🤖 Morphological Operation Implementation:
+   1. Apply **erosion** and **dilation** operations on the images.
+   2. Use varying kernel sizes **(e.g., 1x1 3x3, 5x5, 7x7, 9x9)** for both erosion and dilation to observe feature variations.
+   3. Generate processed versions of each image for every combination of kernel sizes **(5 for erosion × 5 for dilation = 25 combinations)**.
+
+## 🤖 Feature Extraction:
+   1. Analyze the morphological effects (texture, edge variations, etc.) introduced by erosion and dilation for each kernel size.
+   2. Quantify the changes in image features (e.g., edge intensities, texture uniformity) using image-processing metrics like:
+   3. Edge detection (e.g., Sobel or Canny filters).
+   4. Texture analysis (e.g., Gray Level Co-occurrence Matrix, Local Binary Patterns).
+   5. Pixel intensity histograms.
+
+## 🤖 Analysis of Feature Shrinkage:
+   1. Compare how image details shrink or expand under each kernel size.
+   2. Evaluate the sensitivity of deepfake images versus real images to morphological operations by measuring:
+   3. Loss of texture/edge details in real images.
+   4. Over-smoothness or artifact appearance in deepfake images.
+## 🤖 Visualization and Reporting:
+    1. Create visual comparisons of morphological effects (before and after erosion/dilation) for both real and deepfake images.
+    2. Summarize findings and key observations in a detailed report.
+    3. Highlight the kernel size that provides the most distinct differentiation.
+
+## 🤖 Conclusion and Recommendations:
+    1. Conclude whether morphological erosion and dilation effectively differentiate deepfake and real images.
+    2. Suggest future improvements, such as incorporating additional image-processing techniques or exploring other morphological operations.
+
 ```python
 import cv2
 from google.colab.patches import cv2_imshow
