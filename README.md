@@ -74,10 +74,11 @@ This approach could contribute to the development of a practical method for dete
     1. Create visual comparisons of morphological effects (before and after erosion/dilation) for both real and deepfake images.
     2. Summarize findings and key observations in a detailed report.
     3. Highlight the kernel size that provides the most distinct differentiation.
-
 ## 🤖 Conclusion and Recommendations:
     1. Conclude whether morphological erosion and dilation effectively differentiate deepfake and real images.
     2. Suggest future improvements, such as incorporating additional image-processing techniques or exploring other morphological operations.
+
+
 
 ```python
 import cv2
