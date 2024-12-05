@@ -70,15 +70,14 @@ This approach could contribute to the development of a practical method for dete
    2. Evaluate the sensitivity of deepfake images versus real images to morphological operations by measuring:
    3. Loss of texture/edge details in real images.
    4. Over-smoothness or artifact appearance in deepfake images.
-
 ## 🤖 Visualization and Reporting:
-    1. Create visual comparisons of morphological effects (before and after erosion/dilation) for both real and deepfake images.
-    2. Summarize findings and key observations in a detailed report.
-    3. Highlight the kernel size that provides the most distinct differentiation.
-    
+   1. Create visual comparisons of morphological effects (before and after erosion/dilation) for both real and deepfake images.
+   2. Summarize findings and key observations in a detailed report.
+   3. Highlight the kernel size that provides the most distinct differentiation.
+
 ## 🤖 Conclusion and Recommendations:
-    1. Conclude whether morphological erosion and dilation effectively differentiate deepfake and real images.
-    2. Suggest future improvements, such as incorporating additional image-processing techniques or exploring other morphological operations.
+   1. Conclude whether morphological erosion and dilation effectively differentiate deepfake and real images.
+   2. Suggest future improvements, such as incorporating additional image-processing techniques or exploring other morphological operations.
 
 
 
