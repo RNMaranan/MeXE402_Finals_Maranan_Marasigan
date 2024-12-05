@@ -30,6 +30,92 @@
 ![i (1)](https://github.com/user-attachments/assets/d81e6edb-a197-433e-a35b-5e2cc714cc50)
 
 # 📍 ABSTRACT
+```python
+import cv2
+from google.colab.patches import cv2_imshow
+import numpy as np
+
+image = cv2.imread("images/DeepReal.png")
+# cv2_imshow(image)
+
+gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+canny_image = cv2.Canny(gray,150, 200)
+# cv2_imshow(canny_image)
+
+# Erosion and Dilation
+
+kernel = np.ones((1,1), np.uint8)
+dilate_image = cv2.dilate(canny_image, kernel, iterations=1)
+kernel1 = np.ones((3,3), np.uint8)
+dilate_image1 = cv2.dilate(canny_image, kernel1, iterations=1)
+kernel2 = np.ones((5,5), np.uint8)
+dilate_image2 = cv2.dilate(canny_image, kernel2, iterations=1)
+kernel3 = np.ones((7,7), np.uint8)
+dilate_image3 = cv2.dilate(canny_image, kernel3, iterations=1)
+kernel4 = np.ones((9,9), np.uint8)
+dilate_image4 = cv2.dilate(canny_image, kernel4, iterations=1)
+
+#Erosion
+kernel = np.ones((1,1), np.uint8)
+erode_image = cv2.erode(dilate_image,kernel, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image1,kernel, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image2,kernel, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image3,kernel, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image4,kernel, iterations=1)
+cv2_imshow(erode_image)
+
+#kernel1 = np.ones((3,3), np.uint8)
+erode_image = cv2.erode(dilate_image,kernel1, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image1,kernel1, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image2,kernel1, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image3,kernel1, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image4,kernel1, iterations=1)
+cv2_imshow(erode_image)
+
+#kernel2 = np.ones((5,5), np.uint8)
+erode_image = cv2.erode(dilate_image,kernel2, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image1,kernel2, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image2,kernel2, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image3,kernel2, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image4,kernel2, iterations=1)
+cv2_imshow(erode_image)
+
+#kernel3 = np.ones((7,7), np.uint8)
+erode_image = cv2.erode(dilate_image,kernel3, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image1,kernel3, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image2,kernel3, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image3,kernel3, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image4,kernel3, iterations=1)
+cv2_imshow(erode_image)
+
+#kernel4 = np.ones((9,9), np.uint8)
+erode_image = cv2.erode(dilate_image,kernel4, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image1,kernel4, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image2,kernel4, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image3,kernel4, iterations=1)
+cv2_imshow(erode_image)
+erode_image = cv2.erode(dilate_image4,kernel4, iterations=1)
+cv2_imshow(erode_image)
+```
 
 ## 🤖 Objectives
 - The project aims to utilize **morphological erosion** to differentiate between deepfake and real face images. The primary focus is to analyze and identify variations in texture and edges and assess how image features shrink under varying kernel sizes.  
