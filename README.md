@@ -30,6 +30,22 @@
 ![i (1)](https://github.com/user-attachments/assets/d81e6edb-a197-433e-a35b-5e2cc714cc50)
 
 # 📍 ABSTRACT
+
+## 🤖 Objectives
+- The project aims to utilize **morphological erosion** to differentiate between deepfake and real face images. The primary focus is to analyze and identify variations in texture and edges and assess how image features shrink under varying kernel sizes.  
+
+## 🤖 Approach  
+1. Implement **morphological erosion** on datasets containing deepfake and real face images.  
+2. Examine the extracted features, specifically focusing on texture patterns and edge consistency.  
+3. Experiment with different **kernel sizes** to evaluate their impact on the erosion process and the visual differences between the two image types.  
+
+## 🤖 Expected Results  
+The project expects to highlight unique patterns or inconsistencies in deepfake images that become prominent after erosion.  
+- **Real face images**: Anticipated to exhibit more uniform and consistent shrinkage.  
+- **Deepfake images**: Expected to reveal irregularities in texture and edges, providing a basis for differentiation.  
+
+This approach could contribute to the development of a practical method for detecting deepfakes in **computer vision** applications.
+
 ```python
 import cv2
 from google.colab.patches import cv2_imshow
@@ -116,19 +132,4 @@ cv2_imshow(erode_image)
 erode_image = cv2.erode(dilate_image4,kernel4, iterations=1)
 cv2_imshow(erode_image)
 ```
-
-## 🤖 Objectives
-- The project aims to utilize **morphological erosion** to differentiate between deepfake and real face images. The primary focus is to analyze and identify variations in texture and edges and assess how image features shrink under varying kernel sizes.  
-
-## 🤖 Approach  
-1. Implement **morphological erosion** on datasets containing deepfake and real face images.  
-2. Examine the extracted features, specifically focusing on texture patterns and edge consistency.  
-3. Experiment with different **kernel sizes** to evaluate their impact on the erosion process and the visual differences between the two image types.  
-
-## 🤖 Expected Results  
-The project expects to highlight unique patterns or inconsistencies in deepfake images that become prominent after erosion.  
-- **Real face images**: Anticipated to exhibit more uniform and consistent shrinkage.  
-- **Deepfake images**: Expected to reveal irregularities in texture and edges, providing a basis for differentiation.  
-
-This approach could contribute to the development of a practical method for detecting deepfakes in **computer vision** applications.  
 
