@@ -68,13 +68,13 @@ This approach could contribute to the development of a practical method for dete
   - **Pixel intensity histograms**.  
 
 
-## 🤖 Analysis of Feature Shrinkage:
+## 🤖 Step 4. Analysis of Feature Shrinkage:
 - Compare how image details shrink or expand under each kernel size.  
 - Evaluate the sensitivity of deepfake images versus real images to morphological operations by measuring:  
   - **Loss of texture/edge details** in real images.  
   - **Over-smoothness or artifact appearance** in deepfake images.  
 
-## 🤖 Visualization and Reporting:
+## 🤖 Step 5. Visualization and Reporting:
 - Create visual comparisons of morphological effects (before and after erosion/dilation) for both real and deepfake images.
 - Summarize findings and key observations in a detailed report.
 - Highlight the kernel size that provides the most distinct differentiation.
