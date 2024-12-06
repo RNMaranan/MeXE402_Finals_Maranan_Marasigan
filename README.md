@@ -85,13 +85,88 @@ This approach could contribute to the development of a practical method for dete
 
 ## 🤖 Findings
 
+## <p align="center">Observations on Morphological Erosion: Deepfake vs. Real Face</p>
+
+### <p align="center">Side-by-Side Comparison</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c72d45e7-23fa-49a6-9b95-b07305c8ea42" alt="Deepfake vs Real Face Eroded" width="80%">
+</p>
+<p align="center">
+  <b>Left</b>: Deepfake (Eroded) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Right</b>: Real Face (Eroded)
+</p>
+
+
+Upon implementing **morphological erosion** on datasets containing deepfake and real face images, the following observations were noted:
+
+### 1. **Line Consistency**
+- **Deepfake**: Inconsistent and uneven lines, with noticeable breaks and faint areas such as beard edges and hair strands.  
+- **Real Face**: Smooth and connected lines, maintaining structural integrity throughout the image.
+
+### 2. **Level of Detail**
+- **Deepfake**: Showed less detail, with fragmented or poorly defined features, such as facial hair and textures.  
+- **Real Face**: Retained a higher level of detail, with fine lines and textures accurately represented.
+
+### 3. **Edge Sharpness**
+- **Deepfake**: Edges appeared less sharp, with blurry transitions and irregularities in regions that should have continuous lines.  
+- **Real Face**: Displayed sharper and well-defined edges, highlighting the clarity of facial features.
+
+
+### 4. **Structural Noise**
+- **Deepfake**: Exhibited noise and artifacts, with unnecessary disruptions in regions that should have been uniform.  
+- **Real Face**: Minimal noise, with clean and artifact-free lines.
+
+
 ## 🤖 Challenges
 
+## <p align="center">Challenges in Classifying Deepfake and Real Images</p>
+
+### 1. **Inconsistent Feature Visibility**:  
+- Sometimes, even real images may not clearly show facial features due to lighting, angle, or image quality, making it harder to classify them accurately.
+
+### 2. **Inconsistent Line Behavior**:  
+- Lines and edges in both deepfake and real images may not always be consistent, especially in areas like facial contours or hair, making it difficult to distinguish between deepfake and real images.
+
+### 3. **Variation in Sharpness**:  
+- Sharpness can vary, making it challenging to distinguish between deepfake and real images.
+
+### 4. **Noise and Artifacts**:  
+- Both deepfake and real images can exhibit noise or artifacts, though they are more common and prominent in deepfake images, complicating classification.
+
+### 5. **Quality of Image Details**:  
+- In some cases, the quality of the image, such as pixelation or blurriness, may obscure key features, making it difficult to classify even real images accurately.
+
 ## 🤖 Outcome
+
+## <p align="center">Outcome of Deepfake and Original Images Under Different Kernel Sizes</p>
+
+![EROSION (2)_pages-to-jpg-0001](https://github.com/user-attachments/assets/58dd95e0-c297-43d5-88db-9f7a7636cbfb)
+
+## <p align="center">Findings Table: Erosion and Dilation Effects</p>
+
+
+| **Kernel Size** | **Dilation 1×1**                                       | **Dilation 3×3**                                   | **Dilation 5×5**                                   | **Dilation 7×7**                                     | **Dilation 9×9**                                     |
+|-----------------|--------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|------------------------------------------------------|------------------------------------------------------|
+| **1×1 Erosion** | Fine details retained; sharp and clear edges.          | Edges thicken slightly, fine details remain visible.| Thicker outlines, prominent features emphasized, some details blur.| Noticeable thickening of edges; smaller details fade, bold outlines dominate.| Extreme edge thickening, bold structural lines dominate, finer details erased.|
+| **3×3 Erosion** | Completely black, no visible lines.| Moderate edge thickness, fewer fine details.       | Thick edges dominate; smaller features are nearly absent. | Bold, dense outlines dominate; fine details completely removed. | Large, prominent structures persist, heavy abstraction of image. | 
+| **5×5 Erosion** | Completely black, no visible lines.          | Slight edge restoration, but focus is on large-scale outlines. | Thick and bold outlines dominate the image.        | Minimal fine detail remains; heavily emphasized outlines. | Maximum simplification, large bold lines dominate. |
+| **7×7 Erosion** | Completely black, no visible lines. | Bold, simplified edges reappear; noticeable detail loss. | Thick, blocky outlines dominate.                  | Edges lose structural complexity; bold, abstract appearance. | Maximum abstraction; only largest structural outlines persist. |
+| **9×9 Erosion** | Completely black, no visible lines. | Slight edge recovery, minimal abstract lines visible. | Thick and prominent outlines emerge; finer textures are almost absent. | Highly simplified and bold lines; abstract representation. | Maximum abstraction and loss of complexity; only basic shapes and boldest edges remain. | 
+
+## <p align="center">General Observations</p>
+
+### Erosion Behavior:
+- As the erosion kernel size increases, finer details are progressively removed, leaving only prominent edges and structures.
+
+### Dilation Behavior:
+- Larger dilation kernel sizes enhance the thickness of edges but blur finer details, especially when erosion is aggressive.
 
 ![i (4)](https://github.com/user-attachments/assets/04045c0a-f69c-4795-86d7-34e7671cb05a)
 
 ## 📍 ADDITIONAL MATERIAL
+
+### Code on Google Colab
+
 ```python
 import cv2
 from google.colab.patches import cv2_imshow
@@ -178,7 +253,11 @@ cv2_imshow(erode_image)
 erode_image = cv2.erode(dilate_image4,kernel4, iterations=1)
 cv2_imshow(erode_image)
 ```
+### Google Docs Link for a Clearer Comparison of Kernel Sizes and an Additional Sample Image
+Link: https://docs.google.com/document/d/1t6YCFVUJt_Ec93ruNB8spKElL8WSaT12T64t6KtkzpM/edit?usp=sharing
+
 ![i (5)](https://github.com/user-attachments/assets/87cfe895-6373-419c-9d6b-368163a06878)
 
 ## 📍 REFERENCES
+https://www.youtube.com/watch?v=E3Lg4aZVCAU&t=1274s
 
