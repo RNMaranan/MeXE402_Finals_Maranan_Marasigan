@@ -167,7 +167,7 @@ Upon implementing **morphological erosion** on datasets containing deepfake and 
 
 ## <p align="center">Outcome of Deepfake and Original Images Under Different Kernel Sizes</p>
 
-![EROSION (2)_pages-to-jpg-0001](https://github.com/user-attachments/assets/58dd95e0-c297-43d5-88db-9f7a7636cbfb)
+![EROSION - Google Docs_page-0001](https://github.com/user-attachments/assets/8239254f-9042-4af4-b153-0e7079752fe3)
 
 ## <p align="center">Findings Table: Erosion and Dilation Effects</p>
 
