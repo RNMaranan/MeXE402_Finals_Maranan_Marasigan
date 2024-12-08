@@ -87,6 +87,18 @@ This approach could contribute to the development of a practical method for dete
 
 ## <p align="center">Observations on Morphological Erosion: Deepfake vs. Real Face</p>
 
+### <p align="center">Reference Picture</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6aa7477f-b2df-4099-837a-bfe02608ca7e" alt="Your Image Description" width="80%">
+</p>
+<p align="center">
+  <b>Left</b>: Deepfake &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Right</b>: Real Face
+</p>
+
+
+
+
 ### <p align="center">Side-by-Side Comparison</p>
 
 <p align="center">
@@ -95,6 +107,21 @@ This approach could contribute to the development of a practical method for dete
 <p align="center">
   <b>Left</b>: Deepfake (Eroded) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Right</b>: Real Face (Eroded)
 </p>
+
+
+### <p align="center">Other Examples </p> 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/21b4a660-6e7a-4bcc-bc22-1927239077fd" alt="Image 1" width="500">
+  <img src="https://github.com/user-attachments/assets/c92c5fbe-9308-4ce4-a376-04c70fa362d3" alt="Image 2" width="500">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/02a05d08-c95b-47f4-af18-5b24b38fddcb" alt="Deepfake (Eroded)" width="500">
+  <img src="https://github.com/user-attachments/assets/6a5ff9a4-1cb0-4004-9832-6863cd425610" alt="Real Face (Eroded)" width="500">
+</p>
+
+
 
 
 Upon implementing **morphological erosion** on datasets containing deepfake and real face images, the following observations were noted:
@@ -257,9 +284,7 @@ cv2_imshow(erode_image)
 Link: https://docs.google.com/document/d/1t6YCFVUJt_Ec93ruNB8spKElL8WSaT12T64t6KtkzpM/edit?usp=sharing
 
 ### Google Colab Links for Samples
-Link 1:https://colab.research.google.com/drive/1E6731Ypa-lS9lF1IGAVczdqVRGGvxTzi#scrollTo=4IQdSqHMoAcs
-
-Link 2: https://colab.research.google.com/drive/1SAS7I4TSXCx1RLfEBWRjfa4hYuI_4aqF 
+Link 1:https://colab.research.google.com/drive/1au7TBegidm-HI0K3eyUpoB29igAo6D_s
 
 ![i (5)](https://github.com/user-attachments/assets/87cfe895-6373-419c-9d6b-368163a06878)
 
