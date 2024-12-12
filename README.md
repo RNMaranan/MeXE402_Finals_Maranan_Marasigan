@@ -58,10 +58,12 @@ This approach could contribute to the development of a practical method for dete
 ## 🤖 Step 2. Morphological Operation Implementation:
 - Apply **erosion** and **dilation** operations on the images.
 - Use varying kernel sizes **(e.g., 1x1, 3x3, 5x5, 7x7, 9x9)** for both erosion and dilation to observe feature variations.
-- Generate processed versions of each image for every combination of kernel sizes **(5 for erosion × 5 for dilation = 25 combinations)**.
+- Generate processed versions of each image for every combination of kernel sizes **(5 for erosion × 5 for dilation = 25 combinations)** and additional **(5 for erosion with canny edge detection)**.
+- Combine Canny edge detection with the morphological operations.
+- Apply the Canny edge detection for erosion to further analyze edge shrinkage or expansion.
 
 ## 🤖 Step 3. Feature Extraction:
-- Analyze the morphological effects **(texture, edge variations, etc.)** introduced by erosion and dilation for each kernel size.  
+- Analyze the morphological effects **(texture, edge variations, etc.)** introduced by erosion and dilation for each kernel size.
 - Quantify the changes in image features (e.g., edge intensities, texture uniformity) using image-processing metrics like:  
   - **Edge detection** (e.g., Sobel or Canny filters).  
   - **Texture analysis** (e.g., Gray Level Co-occurrence Matrix, Local Binary Patterns).  
@@ -279,6 +281,23 @@ erode_image = cv2.erode(dilate_image3,kernel4, iterations=1)
 cv2_imshow(erode_image)
 erode_image = cv2.erode(dilate_image4,kernel4, iterations=1)
 cv2_imshow(erode_image)
+```
+```python
+kernel = np.ones((1,1), np.uint8)
+erode_image1 = cv2.dilate(canny_image, kernel, iterations=1)
+cv2_imshow(erode_image1)
+kernel1 = np.ones((3,3), np.uint8)
+erode_image2 = cv2.dilate(canny_image, kernel1, iterations=1)
+cv2_imshow(erode_image2)
+kernel2 = np.ones((5,5), np.uint8)
+erode_image3 = cv2.dilate(canny_image, kernel2, iterations=1)
+cv2_imshow(erode_image3)
+kernel3 = np.ones((7,7), np.uint8)
+erode_image4 = cv2.dilate(canny_image, kernel3, iterations=1)
+cv2_imshow(erode_image4)
+kernel4 = np.ones((9,9), np.uint8)
+erode_image5 = cv2.dilate(canny_image, kernel4, iterations=1)
+cv2_imshow(erode_image5)
 ```
 ### Google Docs Link for a Clearer Comparison of Kernel Sizes and an Additional Sample Image
 Link: https://docs.google.com/document/d/1t6YCFVUJt_Ec93ruNB8spKElL8WSaT12T64t6KtkzpM/edit?usp=sharing
