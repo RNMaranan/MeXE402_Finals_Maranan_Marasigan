@@ -303,10 +303,10 @@ cv2_imshow(erode_image5)
 Link: https://docs.google.com/document/d/1t6YCFVUJt_Ec93ruNB8spKElL8WSaT12T64t6KtkzpM/edit?usp=sharing
 
 ### Google Colab Links for Samples
-Link 1:https://colab.research.google.com/drive/1au7TBegidm-HI0K3eyUpoB29igAo6D_s
+Link: https://colab.research.google.com/drive/1au7TBegidm-HI0K3eyUpoB29igAo6D_s
 
-![i (5)](https://github.com/user-attachments/assets/87cfe895-6373-419c-9d6b-368163a06878)
-
+### Video
+Link: https://drive.google.com/file/d/1zxLZTUQWwtLjH16SaQ-mCtdi9a4l3OLv/view?usp=sharing
 ## 📍 REFERENCES
 https://www.youtube.com/watch?v=E3Lg4aZVCAU&t=1274s
 
