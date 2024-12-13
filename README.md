@@ -304,6 +304,10 @@ Link: https://docs.google.com/document/d/1t6YCFVUJt_Ec93ruNB8spKElL8WSaT12T64t6K
 
 ### Google Colab Links for Samples
 Link 1:https://colab.research.google.com/drive/1au7TBegidm-HI0K3eyUpoB29igAo6D_s
+Link 2: https://colab.research.google.com/drive/1xNiwcOgrfzx3xNzLR7vgnbw1dgLJMLPk?fbclid=IwZXh0bgNhZW0CMTEAAR0S1XpdgUsAAEqpun0ncrM13vj9DzZELbp5t9OhqCrNyJDAXv0tBvV6cxM_aem_eDPgrF9M2WHdlcjGIDNKbA
+
+### OpenCV Basics
+Link: https://github.com/RNMaranan/OpenCV_Basics_MEXE-4101_Maranan_Marasigan
 
 ![i (5)](https://github.com/user-attachments/assets/87cfe895-6373-419c-9d6b-368163a06878)
 
